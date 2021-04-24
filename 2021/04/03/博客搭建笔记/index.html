@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://gitee.com/xacy/blogimage/raw/master/img/image-20210418113715886.png">
 <meta property="og:image" content="https://gitee.com/xacy/blogimage/raw/master/img/image-20210418113715886.png">
 <meta property="article:published_time" content="2021-04-03T13:22:36.320Z">
-<meta property="article:modified_time" content="2021-04-24T13:06:45.318Z">
+<meta property="article:modified_time" content="2021-04-24T13:37:42.138Z">
 <meta property="article:author" content="oy">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://gitee.com/xacy/blogimage/raw/master/img/image-20210418113715886.png">
@@ -183,7 +183,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-24 21:06:45" itemprop="dateModified" datetime="2021-04-24T21:06:45+08:00">2021-04-24</time>
+                <time title="修改时间：2021-04-24 21:37:42" itemprop="dateModified" datetime="2021-04-24T21:37:42+08:00">2021-04-24</time>
               </span>
 
           
@@ -224,7 +224,7 @@
 <p>首先新建一个文件夹，右键打开Git Bash<em><strong>（注意：git中的复制粘贴不是 Ctrl+C 和 Ctrl+V，而是 Ctrl+insert 和 Shift+insert.）</strong></em></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ssh <span class="comment">#检查是否安装SSH</span></span><br><span class="line">ssh keygen -t rsa <span class="comment">#生成密钥，按四次回车</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#打开公钥</span></span><br><span class="line"><span class="built_in">cd</span> ~/.ssh </span><br><span class="line">ls</span><br><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure>
 
-<p>复制公钥的内容。</p>
+<p>复制公钥的内容。或者进入C:\Users[你的Windows用户名]\.ssh，找到id_rsa.pub</p>
 <p>进入Github主页 - <em><strong>Settings</strong></em> - <em><strong>SSH and GPG keys</strong></em>  -  <em><strong>New SSH key</strong></em>，将公钥粘贴到key中。</p>
 <p>验证是否成功在 Git Bash 中输入</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
