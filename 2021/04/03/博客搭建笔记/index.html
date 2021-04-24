@@ -24,14 +24,14 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="个人博客搭建——基于Hexo和GitHub">
 <meta property="og:url" content="http://example.com/2021/04/03/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/index.html">
-<meta property="og:site_name" content="A thinking cat">
+<meta property="og:site_name" content="A Thinking Cat">
 <meta property="og:description" content="为什么要搭建个人博客呢？因为很酷！这是直观感受，另外也是因为需要一个自己的小天地，将所思所想所学从一团蒙昧中抽取、规整，供日后再提取时不至于手忙脚乱，又重学习，也可在日后对自己的生命历程回顾时有章可循。  博客搭建的目的：1.笔记本：学习心得；2.日记本：生活体验；3.材料库：书摘文摘  前人栽树，后人乘凉，前辈们的博客搭建教程已经非常完善，但实践中总会出现一些奇奇怪怪的问题。本篇博文主要是记录我">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://gitee.com/xacy/blogimage/raw/master/img/image-20210418113715886.png">
 <meta property="og:image" content="https://gitee.com/xacy/blogimage/raw/master/img/image-20210418113715886.png">
 <meta property="article:published_time" content="2021-04-03T13:22:36.320Z">
-<meta property="article:modified_time" content="2021-04-24T13:37:42.138Z">
-<meta property="article:author" content="oy">
+<meta property="article:modified_time" content="2021-04-24T13:54:48.500Z">
+<meta property="article:author" content="o">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://gitee.com/xacy/blogimage/raw/master/img/image-20210418113715886.png">
 
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title>个人博客搭建——基于Hexo和GitHub | A thinking cat</title>
+  <title>个人博客搭建——基于Hexo和GitHub | A Thinking Cat</title>
   
 
 
@@ -99,7 +99,7 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">A thinking cat</h1>
+      <h1 class="site-title">A Thinking Cat</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -157,12 +157,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="oy">
+      <meta itemprop="name" content="o">
       <meta itemprop="description" content="人是一根会思索的芦苇">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A thinking cat">
+      <meta itemprop="name" content="A Thinking Cat">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -183,7 +183,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-24 21:37:42" itemprop="dateModified" datetime="2021-04-24T21:37:42+08:00">2021-04-24</time>
+                <time title="修改时间：2021-04-24 21:54:48" itemprop="dateModified" datetime="2021-04-24T21:54:48+08:00">2021-04-24</time>
               </span>
 
           
@@ -222,7 +222,7 @@
 <hr>
 <h3 id="1-服务器——GitHub仓库"><a href="#1-服务器——GitHub仓库" class="headerlink" title="1.服务器——GitHub仓库"></a>1.服务器——GitHub仓库</h3><h4 id="1-1绑定GitHub"><a href="#1-1绑定GitHub" class="headerlink" title="1.1绑定GitHub"></a>1.1绑定GitHub</h4><p>用git上传文件到GitHub需要登陆，每次输入密码十分麻烦，而采用公钥登录就省去了输入密码的步骤。</p>
 <p>首先新建一个文件夹，右键打开Git Bash<em><strong>（注意：git中的复制粘贴不是 Ctrl+C 和 Ctrl+V，而是 Ctrl+insert 和 Shift+insert.）</strong></em></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ssh <span class="comment">#检查是否安装SSH</span></span><br><span class="line">ssh keygen -t rsa <span class="comment">#生成密钥，按四次回车</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#打开公钥</span></span><br><span class="line"><span class="built_in">cd</span> ~/.ssh </span><br><span class="line">ls</span><br><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ssh <span class="comment">#检查是否安装SSH</span></span><br><span class="line">ssh keygen -t rsa <span class="comment">#生成密钥，按回车，按要求输入yes或回车</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#打开公钥</span></span><br><span class="line"><span class="built_in">cd</span> ~/.ssh </span><br><span class="line">ls</span><br><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure>
 
 <p>复制公钥的内容。或者进入C:\Users[你的Windows用户名]\.ssh，找到id_rsa.pub</p>
 <p>进入Github主页 - <em><strong>Settings</strong></em> - <em><strong>SSH and GPG keys</strong></em>  -  <em><strong>New SSH key</strong></em>，将公钥粘贴到key中。</p>
@@ -275,8 +275,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/04/03/%E5%BC%80%E4%B8%9A%E5%95%A6%EF%BC%81/" rel="prev" title="">
-      <i class="fa fa-chevron-left"></i> 
+    <a href="/2021/04/03/%E5%BC%80%E4%B8%9A%E5%95%A6%EF%BC%81/" rel="prev" title="开业啦！">
+      <i class="fa fa-chevron-left"></i> 开业啦！
     </a></div>
       <div class="post-nav-item">
     <a href="/2021/04/15/markdown/" rel="next" title="markdown语法">
@@ -346,7 +346,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">oy</p>
+  <p class="site-author-name" itemprop="name">o</p>
   <div class="site-description" itemprop="description">人是一根会思索的芦苇</div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -386,7 +386,7 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">oy</span>
+  <span class="author" itemprop="copyrightHolder">o</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
