@@ -27,13 +27,10 @@
 <meta property="og:site_name" content="A Thinking Cat">
 <meta property="og:description" content="为什么要搭建个人博客呢？因为很酷！这是直观感受，另外也是因为需要一个自己的小天地，将所思所想所学从一团蒙昧中抽取、规整，供日后再提取时不至于手忙脚乱，又重学习，也可在日后对自己的生命历程回顾时有章可循。  博客搭建的目的：1.笔记本：学习心得；2.日记本：生活体验；3.材料库：书摘文摘  前人栽树，后人乘凉，前辈们的博客搭建教程已经非常完善，但实践中总会出现一些奇奇怪怪的问题。本篇博文主要是记录我">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gitee.com/xacy/blogimage/raw/master/img/image-20210418113715886.png">
-<meta property="og:image" content="https://gitee.com/xacy/blogimage/raw/master/img/image-20210418113715886.png">
 <meta property="article:published_time" content="2021-04-03T13:22:36.320Z">
-<meta property="article:modified_time" content="2021-04-24T14:30:43.457Z">
+<meta property="article:modified_time" content="2021-04-25T09:26:48.608Z">
 <meta property="article:author" content="o">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gitee.com/xacy/blogimage/raw/master/img/image-20210418113715886.png">
 
 <link rel="canonical" href="http://example.com/2021/04/03/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/">
 
@@ -183,7 +180,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-04-24 22:30:43" itemprop="dateModified" datetime="2021-04-24T22:30:43+08:00">2021-04-24</time>
+                <time title="修改时间：2021-04-25 17:26:48" itemprop="dateModified" datetime="2021-04-25T17:26:48+08:00">2021-04-25</time>
               </span>
 
           
@@ -209,18 +206,16 @@
 <p>3.而<em><strong>域名</strong></em>则是用来请求访问我们的服务器上文件的网络地址，也可在🐜、🐧、Godaddy等处购买，如果使用Github仓库作为服务器，也可以Github博客地址直接作为我们的域名。</p>
 <p>完成了这三件事，博客就部署好啦。下面开始吧！</p>
 <hr>
-<h3 id="0-准备"><a href="#0-准备" class="headerlink" title="0. 准备"></a>0. 准备</h3><p>工欲善其事必先利其器，在正式搭建博客前，先安装两个软件吧。</p>
+<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>工欲善其事必先利其器，在正式搭建博客前，先安装两个软件吧。</p>
 <p>1.首先是git，类似命令提示符bash，我们用它来上传<em><strong>文件</strong></em> 到<em><strong>云服务器</strong></em>。在<a target="_blank" rel="noopener" href="https://git-scm.com/">git官网</a>下载，安装时选默认设置即可。</p>
 <p>安装完成后右键多出两个git选项。</p>
-<p><img src="https://gitee.com/xacy/blogimage/raw/master/img/image-20210418113715886.png" alt="image-20210418113715886"></p>
-<img src="https://gitee.com/xacy/blogimage/raw/master/img/image-20210418113715886.png" width=256 height=256 />
-
+<p>![](images/hexo git.png)</p>
 <p>2.第二是node.js，用于安装Hexo，也就是生成博客框架。在<a target="_blank" rel="noopener" href="https://nodejs.org/en/">node.js官网</a>下载，安装时选默认设置即可。</p>
 <p>安装完成后可运行命令提示符检查是否安装成功。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v  <span class="comment">#查看node版本</span></span><br><span class="line">npm -v  <span class="comment">#查看npm版本</span></span><br></pre></td></tr></table></figure>
 
 <hr>
-<h3 id="1-服务器——GitHub仓库"><a href="#1-服务器——GitHub仓库" class="headerlink" title="1.服务器——GitHub仓库"></a>1.服务器——GitHub仓库</h3><h4 id="1-1绑定GitHub"><a href="#1-1绑定GitHub" class="headerlink" title="1.1绑定GitHub"></a>1.1绑定GitHub</h4><p>用git上传文件到GitHub需要登陆，每次输入密码十分麻烦，而采用公钥登录就省去了输入密码的步骤。</p>
+<h3 id="第一步：服务器——GitHub仓库"><a href="#第一步：服务器——GitHub仓库" class="headerlink" title="第一步：服务器——GitHub仓库"></a>第一步：服务器——GitHub仓库</h3><h4 id="绑定GitHub"><a href="#绑定GitHub" class="headerlink" title="绑定GitHub"></a>绑定GitHub</h4><p>用git上传文件到GitHub需要登陆，每次输入密码十分麻烦，而采用公钥登录就省去了输入密码的步骤。</p>
 <p>首先新建一个文件夹，右键打开Git Bash<em><strong>（注意：git中的复制粘贴不是 Ctrl+C 和 Ctrl+V，而是 Ctrl+insert 和 Shift+insert.）</strong></em></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ssh <span class="comment">#检查是否安装SSH</span></span><br><span class="line">ssh keygen -t rsa <span class="comment">#生成密钥，按回车，按要求输入yes或回车</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#打开公钥</span></span><br><span class="line"><span class="built_in">cd</span> ~/.ssh </span><br><span class="line">ls</span><br><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure>
 
@@ -230,40 +225,40 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 
 <p>第一次登录输入yes即可。</p>
-<h4 id="1-2-创建仓库"><a href="#1-2-创建仓库" class="headerlink" title="1.2 创建仓库"></a>1.2 创建仓库</h4><p>创建一个仓库名称为[用户名.github.io]，必须使用<em><strong>Github用户名</strong></em>。这它就是我们的服务器啦！<br>进入仓库后，点击Code，该地址即是<em><strong>仓库地址</strong></em>。</p>
+<h4 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h4><p>创建一个仓库名称为[用户名.github.io]，必须使用<em><strong>Github用户名</strong></em>。这它就是我们的服务器啦！<br>进入仓库后，点击Code，该地址即是<em><strong>仓库地址</strong></em>。</p>
 <hr>
-<h3 id="2-博客框架——Hexo"><a href="#2-博客框架——Hexo" class="headerlink" title="2. 博客框架——Hexo"></a>2. 博客框架——Hexo</h3><h4 id="2-1-安装Hexo"><a href="#2-1-安装Hexo" class="headerlink" title="2.1 安装Hexo"></a>2.1 安装Hexo</h4><p>新建文件夹Blog，右键打开Git Bash Here，这个文件夹就是我们本地的博客文件。</p>
+<h3 id="第二步：博客框架——Hexo"><a href="#第二步：博客框架——Hexo" class="headerlink" title="第二步：博客框架——Hexo"></a>第二步：博客框架——Hexo</h3><h4 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h4><p>新建文件夹Blog，右键打开Git Bash Here，这个文件夹就是我们本地的博客文件。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#安装cnpm，其下载速度较npm更快</span></span><br><span class="line">npm install -g cnpm --registry=http://registry.npm.taobao.org	<span class="comment">#从淘宝安装cnpm管理器</span></span><br><span class="line">cnpm -v	<span class="comment">#查看cnpm版本，检查cnpm是否安装</span></span><br><span class="line"><span class="comment">#安装hexo</span></span><br><span class="line">cnpm install -g hexo-cli    <span class="comment">#安装hexo框架</span></span><br><span class="line">hexo -v	<span class="comment">#查看hexo版本</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="2-2-生成博客"><a href="#2-2-生成博客" class="headerlink" title="2.2 生成博客"></a>2.2 生成博客</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init 	<span class="comment">#生成博客 初始化博客</span></span><br><span class="line">hexo g	<span class="comment">#静态部署</span></span><br><span class="line">hexo s	<span class="comment">#启动本地博客服务</span></span><br></pre></td></tr></table></figure>
+<h4 id="生成博客"><a href="#生成博客" class="headerlink" title="生成博客"></a>生成博客</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init 	<span class="comment">#生成博客 初始化博客</span></span><br><span class="line">hexo g	<span class="comment">#静态部署</span></span><br><span class="line">hexo s	<span class="comment">#启动本地博客服务</span></span><br></pre></td></tr></table></figure>
 
 <p>在浏览器输入<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> 即可访问，是不是十分简单？</p>
-<h4 id="2-3-将博客部署到GitHub"><a href="#2-3-将博客部署到GitHub" class="headerlink" title="2.3 将博客部署到GitHub"></a>2.3 将博客部署到GitHub</h4><p>但现在只是在本地访问博客，若别人想通过网络访问我们的博客，还需要先将我们的博客文件存放在云端，也就是我们之前搭建的Github仓库。在Blog中用笔记本打开配置文档config.yml，在文件底部Deployment部分填入，注意空格。repo即是我们的<em><strong>仓库地址</strong></em>，branch一般是master，也可能是main。</p>
+<h4 id="将博客部署到GitHub"><a href="#将博客部署到GitHub" class="headerlink" title="将博客部署到GitHub"></a>将博客部署到GitHub</h4><p>但现在只是在本地访问博客，若别人想通过网络访问我们的博客，还需要先将我们的博客文件存放在云端，也就是我们之前搭建的Github仓库。在Blog中用笔记本打开配置文档config.yml，在文件底部Deployment部分填入，注意空格。repo即是我们的<em><strong>仓库地址</strong></em>，branch一般是master，也可能是main。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">	type: git</span><br><span class="line">	repo: https:&#x2F;&#x2F;github.com&#x2F;[用户名]&#x2F;[用户名].github.io.git</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
 <p>然后回到 Blog 文件夹中，打开 Git Bash，安装Git部署插件，部署到Github仓库里。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo c	<span class="comment">#清理</span></span><br><span class="line">hexo g	<span class="comment">#生成</span></span><br><span class="line">hexo d	<span class="comment">#部署到Github仓库里</span></span><br></pre></td></tr></table></figure>
 <p>完成以后，打开浏览器，输入 https://[用户名].github.io， 就可以打开你的网页了。</p>
 <hr>
-<h3 id="3-域名——Freenom"><a href="#3-域名——Freenom" class="headerlink" title="3.域名——Freenom"></a>3.域名——Freenom</h3><p>域名可以在<a target="_blank" rel="noopener" href="https://wanwang.aliyun.com/">阿里云万网</a>，<a target="_blank" rel="noopener" href="https://cloud.tencent.com/">腾讯云</a>等网站购买。在<a target="_blank" rel="noopener" href="https://my.freenom.com/">Freenom</a>也可获得免费域名，但免费域名可能不被搜索引擎收录。购买后把我们的博客地址（https://[用户名].github.io）输入即可。</p>
+<h3 id="第三步：域名——Freenom"><a href="#第三步：域名——Freenom" class="headerlink" title="第三步：域名——Freenom"></a>第三步：域名——Freenom</h3><p>域名可以在<a target="_blank" rel="noopener" href="https://wanwang.aliyun.com/">阿里云万网</a>，<a target="_blank" rel="noopener" href="https://cloud.tencent.com/">腾讯云</a>等网站购买。在<a target="_blank" rel="noopener" href="https://my.freenom.com/">Freenom</a>也可获得免费域名，但免费域名可能不被搜索引擎收录。购买后把我们的博客地址（https://[用户名].github.io）输入即可。</p>
 <hr>
-<h3 id="4-使用"><a href="#4-使用" class="headerlink" title="4. 使用"></a>4. 使用</h3><p>4.1写博客</p>
-<p>打开blog文件夹下的source - _posts，创建.md文件，使用markdown语法进行写作即可！可参考<a target="_blank" rel="noopener" href="https://markdown.com.cn/basic-syntax/images.html">Markdown</a>官方教程，很容易上手。</p>
-<p>4.2博客主题及设计</p>
-<p>我们可以开始对博客进行个性化设置了，从使用一些常用的主题起。</p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="写写博客"><a href="#写写博客" class="headerlink" title="写写博客"></a>写写博客</h4><p>打开blog文件夹下的source - _posts，创建.md文件，使用markdown语法进行写作即可！可参考<a target="_blank" rel="noopener" href="https://markdown.com.cn/basic-syntax/images.html">Markdown</a>官方教程，很容易上手。</p>
+<h4 id="博客主题及设计"><a href="#博客主题及设计" class="headerlink" title="博客主题及设计"></a>博客主题及设计</h4><p>我们可以开始对博客进行个性化设置了，从使用一些常用的主题起。</p>
 <p>在博客根目录Blog文件夹右键Git Bash</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#next主题</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next <span class="comment">#下载主题到Blog/themes</span></span><br><span class="line"><span class="comment">#修改根目录下的 _config.yml 文件 ： theme: next</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#yilia主题</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia  </span><br><span class="line"><span class="comment">#修改根目录下的 _config.yml 文件 ： theme: yilia</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#next主题</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next <span class="comment">#下载主题到Blog/themes</span></span><br><span class="line"><span class="comment">#修改根目录下的 _config.yml 文件 ： theme: next</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#yilia主题</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia  </span><br><span class="line"><span class="comment">#修改根目录下的 _config.yml 文件 ： theme: yilia</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#material主题</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/bollnh/hexo-theme-material.git themes/material</span><br><span class="line"><span class="comment">#修改根目录下的_config.yml文件</span></span><br><span class="line"><span class="comment">#复制一份themes/material下的_config.template.yml，修改文件名为_config.yml</span></span><br><span class="line"><span class="comment">#若遇到报错参见附录</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>回到根目录打开Git Bash，输入如下三条命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo c	<span class="comment">#清理</span></span><br><span class="line">hexo g	<span class="comment">#生成</span></span><br><span class="line">hexo d	<span class="comment">#部署到远程Github仓库</span></span><br></pre></td></tr></table></figure>
 
 <p>不论是写完博客还是修改主题，运行这三行命令即可更新博客。</p>
 <p>完成啦！</p>
-<h3 id="注：hexo-d-错误的解决方案"><a href="#注：hexo-d-错误的解决方案" class="headerlink" title="注：hexo d 错误的解决方案"></a>注：hexo d 错误的解决方案</h3><p>可能是vpn代理问题，查看vpn使用的端口号，修改config。详见<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_37555071/article/details/114260533?utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control&dist_request_id=1332041.14043.16192740458511311&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control">这篇文章</a></p>
+<h3 id="附录："><a href="#附录：" class="headerlink" title="附录："></a>附录：</h3><h4 id="hexo-d-错误的解决方案"><a href="#hexo-d-错误的解决方案" class="headerlink" title="hexo d 错误的解决方案"></a>hexo d 错误的解决方案</h4><p>可能是vpn代理问题，查看vpn使用的端口号，修改config。详见<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_37555071/article/details/114260533?utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control&dist_request_id=1332041.14043.16192740458511311&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control">这篇文章</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy 127.0.0.1:7890</span><br></pre></td></tr></table></figure>
 
 
 
-
+<h4 id="Material主题错误"><a href="#Material主题错误" class="headerlink" title="Material主题错误"></a>Material主题错误</h4><p>参见<a target="_blank" rel="noopener" href="https://github.com/bollnh/hexo-theme-material/issues/686">这里</a>@michaelcai的回答</p>
+<p>修改layout/_widget/dnsprefetch.ejs文件。修改内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;% &#125; else if(theme.comment.use.startsWith(&quot;disqus&quot;)) &#123; %&gt;</span><br><span class="line">&#x2F;&#x2F; to</span><br><span class="line">&lt;% &#125; else if(theme.comment.use &amp;&amp; theme.comment.use.startsWith(&quot;disqus&quot;)) &#123; %&gt;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -350,7 +345,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%90%AD%E5%BB%BA%E6%80%9D%E8%B7%AF"><span class="nav-number">1.</span> <span class="nav-text">搭建思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0-%E5%87%86%E5%A4%87"><span class="nav-number">2.</span> <span class="nav-text">0. 准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%9C%8D%E5%8A%A1%E5%99%A8%E2%80%94%E2%80%94GitHub%E4%BB%93%E5%BA%93"><span class="nav-number">3.</span> <span class="nav-text">1.服务器——GitHub仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1%E7%BB%91%E5%AE%9AGitHub"><span class="nav-number">3.1.</span> <span class="nav-text">1.1绑定GitHub</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="nav-number">3.2.</span> <span class="nav-text">1.2 创建仓库</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E2%80%94%E2%80%94Hexo"><span class="nav-number">4.</span> <span class="nav-text">2. 博客框架——Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-%E5%AE%89%E8%A3%85Hexo"><span class="nav-number">4.1.</span> <span class="nav-text">2.1 安装Hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-%E7%94%9F%E6%88%90%E5%8D%9A%E5%AE%A2"><span class="nav-number">4.2.</span> <span class="nav-text">2.2 生成博客</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-%E5%B0%86%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub"><span class="nav-number">4.3.</span> <span class="nav-text">2.3 将博客部署到GitHub</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%9F%9F%E5%90%8D%E2%80%94%E2%80%94Freenom"><span class="nav-number">5.</span> <span class="nav-text">3.域名——Freenom</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E4%BD%BF%E7%94%A8"><span class="nav-number">6.</span> <span class="nav-text">4. 使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%EF%BC%9Ahexo-d-%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-number">7.</span> <span class="nav-text">注：hexo d 错误的解决方案</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%90%AD%E5%BB%BA%E6%80%9D%E8%B7%AF"><span class="nav-number">1.</span> <span class="nav-text">搭建思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%86%E5%A4%87"><span class="nav-number">2.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E2%80%94%E2%80%94GitHub%E4%BB%93%E5%BA%93"><span class="nav-number">3.</span> <span class="nav-text">第一步：服务器——GitHub仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%91%E5%AE%9AGitHub"><span class="nav-number">3.1.</span> <span class="nav-text">绑定GitHub</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="nav-number">3.2.</span> <span class="nav-text">创建仓库</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6%E2%80%94%E2%80%94Hexo"><span class="nav-number">4.</span> <span class="nav-text">第二步：博客框架——Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Hexo"><span class="nav-number">4.1.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E5%8D%9A%E5%AE%A2"><span class="nav-number">4.2.</span> <span class="nav-text">生成博客</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B0%86%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0GitHub"><span class="nav-number">4.3.</span> <span class="nav-text">将博客部署到GitHub</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E5%9F%9F%E5%90%8D%E2%80%94%E2%80%94Freenom"><span class="nav-number">5.</span> <span class="nav-text">第三步：域名——Freenom</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-number">6.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%99%E5%86%99%E5%8D%9A%E5%AE%A2"><span class="nav-number">6.1.</span> <span class="nav-text">写写博客</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E5%8F%8A%E8%AE%BE%E8%AE%A1"><span class="nav-number">6.2.</span> <span class="nav-text">博客主题及设计</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%99%84%E5%BD%95%EF%BC%9A"><span class="nav-number">7.</span> <span class="nav-text">附录：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#hexo-d-%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-number">7.1.</span> <span class="nav-text">hexo d 错误的解决方案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Material%E4%B8%BB%E9%A2%98%E9%94%99%E8%AF%AF"><span class="nav-number">7.2.</span> <span class="nav-text">Material主题错误</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -364,7 +359,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
